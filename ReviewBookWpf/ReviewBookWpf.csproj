@@ -63,6 +63,7 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Infastructures\Commands\Command.cs" />
     <Compile Include="ViewModel\Base\ViewModels.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="View\Windows\MainWindow.xaml.cs">
@@ -98,7 +99,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Data\" />
-    <Folder Include="Infastructures\" />
     <Folder Include="Model\" />
     <Folder Include="Services\" />
   </ItemGroup>
