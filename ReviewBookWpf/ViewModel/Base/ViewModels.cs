@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ReviewBookWpf.ViewModel.Base
 {
-    internal abstract class ViewModel : INotifyPropertyChanged
+    internal abstract class ViewModels : INotifyPropertyChanged, IDisposable
     {
         public event PropertyChangedEventHandler PropertyChanged;
         protected virtual void OnPropertyChanged([CallerMemberName]string PropertyName = null)
@@ -21,6 +21,23 @@ namespace ReviewBookWpf.ViewModel.Base
             field = value;
             OnPropertyChanged(PropertyName);
             return true;
+        }
+        //~ViewModel()
+        //{
+        //    Dispose(false);
+        //}
+
+        public void Dispose()
+        {
+            Dispose(true);
+        }
+
+        private bool _Disposed;
+        protected virtual void Dispose(bool Disposing)
+        {
+            if (!Disposing || _Disposed) return;
+            _Disposed = true;
+            // Освобождение управляемых ресурсов
         }
     }
 }
