@@ -10,19 +10,39 @@
     <Window.DataContext>
         <vm:MainWindowVM/>
     </Window.DataContext>
-    <Grid>
-        <TextBlock x:Name="textBlock"
-                   HorizontalAlignment="Left"
-                   Margin="121,71"
-                   TextWrapping="Wrap" Text="ReviewBook"
-                   VerticalAlignment="Top"
-                   Height="58"
-                   Width="165"/>
-        <TextBox x:Name="textBox" HorizontalAlignment="Left"
-                 Margin="260,43,0,0"
-                 TextWrapping="Wrap"
-                 Text="{Binding Title, UpdateSourceTrigger=PropertyChanged}"
-                 VerticalAlignment="Top"
-                 Width="132" Height="29"/>
-    </Grid>
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <Button>
+                <TextBlock  Width="45" Height="20" Margin="5,0,0,0" Cursor="Hand">Главная</TextBlock>
+            </Button>
+            <Button>
+                <TextBlock x:Name="GenreField" Width="45" Height="20" Margin="5,0,0,0" Cursor="Hand" Foreground="Black" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}">Жанры</TextBlock>
+            </Button>
+            <Button>
+                <TextBlock Width="110" Height="20" Margin="5,0,0,0" Cursor="Hand">Написать рецензию</TextBlock>
+            </Button>
+            <TextBox Width="106" Height="24" FontSize="16" FontWeight="Bold" Margin="60,0,0,0">Review book
+            </TextBox>
+            <TextBlock Width="130" Height="20" Margin="120,0,0,0" Cursor="Hand">Поиск...</TextBlock>
+            <Button Margin="10,0,0,0" >
+                <Image Source="../Images/user.png" Width="44" Height="20" Cursor="Hand" />
+            </Button>
+        </Menu>
+        <StatusBar DockPanel.Dock="Bottom"></StatusBar>
+        <TabControl>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="208*"/>
+                    <ColumnDefinition Width="189*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="36*"/>
+                    <RowDefinition Height="191*"/>
+                    <RowDefinition Height="177*"/>
+                </Grid.RowDefinitions>
+            </Grid>
+        </TabControl>
+
+
+    </DockPanel>
 </Window>
