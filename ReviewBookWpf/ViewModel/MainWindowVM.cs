@@ -1,4 +1,7 @@
 ﻿
+using System.Windows;
+using System.Windows.Input;
+using ReviewBookWpf.Infastructures.Commands;
 using ReviewBookWpf.ViewModel.Base;
 
 namespace ReviewBookWpf.ViewModel
@@ -21,6 +24,31 @@ namespace ReviewBookWpf.ViewModel
             set => Set(ref _Title, value);
         }
         #endregion
+
+        #region Команды
+
+        #region CloseAppCommand
+        public ICommand CloseAppCommand { get; }
+        private void OnCloseAppCommandExecuted(object p)
+        {
+            Application.Current.Shutdown();
+        }
+
+        private bool CanCloseAppCommandExecute(object p) => true;
+        #endregion
+
+
+
+        #endregion
+        public MainWindowVM()
+        {
+            #region Команды
+
+            CloseAppCommand = new LambdaCommand(OnCloseAppCommandExecuted, CanCloseAppCommandExecute);
+
+
+            #endregion
+        }
     }
 }
 

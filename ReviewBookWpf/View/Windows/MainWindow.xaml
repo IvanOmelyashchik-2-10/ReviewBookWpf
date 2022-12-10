@@ -24,9 +24,14 @@
             <TextBox Width="106" Height="24" FontSize="16" FontWeight="Bold" Margin="60,0,0,0">Review book
             </TextBox>
             <TextBlock Width="130" Height="20" Margin="120,0,0,0" Cursor="Hand">Поиск...</TextBlock>
-            <Button Margin="10,0,0,0" >
-                <Image Source="../Images/user.png" Width="44" Height="20" Cursor="Hand" />
-            </Button>
+            <MenuItem Header="" Width="50">
+                <MenuItem.Icon>
+                    <Image Source="../Images/user.png" Margin="0,0,-25,0"></Image>
+                </MenuItem.Icon>
+                <MenuItem Header="Выход" Command="{Binding CloseAppCommand}"></MenuItem>
+            </MenuItem>
+
+
         </Menu>
         <StatusBar DockPanel.Dock="Bottom"></StatusBar>
         <TabControl>
