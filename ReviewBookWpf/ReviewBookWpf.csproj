@@ -63,7 +63,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Infastructures\Commands\Command.cs" />
+    <Compile Include="Infastructures\Commands\Base\Command.cs" />
+    <Compile Include="Infastructures\Commands\CloseAppCommand.cs" />
     <Compile Include="Infastructures\Commands\LambdaCommand.cs" />
     <Compile Include="ViewModel\Base\ViewModels.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />

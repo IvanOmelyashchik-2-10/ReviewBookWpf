@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:ReviewBookWpf.ViewModel"
+        xmlns:cmd ="clr-namespace:ReviewBookWpf.Infastructures.Commands"
         xmlns:l="clr-namespace:ReviewBookWpf"
         Title="{Binding Title}" 
         Height="450" Width="800">
@@ -28,7 +29,12 @@
                 <MenuItem.Icon>
                     <Image Source="../Images/user.png" Margin="0,0,-25,0"></Image>
                 </MenuItem.Icon>
-                <MenuItem Header="Выход" Command="{Binding CloseAppCommand}"></MenuItem>
+                <!--<MenuItem Header="Выход" Command="{Binding CloseAppCommand}"></MenuItem>-->
+                <MenuItem Header="Выход">
+                    <MenuItem.Command>
+                        <cmd:CloseAppCommand/>
+                    </MenuItem.Command>
+                </MenuItem>
             </MenuItem>
 
 
