@@ -64,6 +64,7 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Infastructures\Commands\Command.cs" />
+    <Compile Include="Infastructures\Commands\LambdaCommand.cs" />
     <Compile Include="ViewModel\Base\ViewModels.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="View\Windows\MainWindow.xaml.cs">
