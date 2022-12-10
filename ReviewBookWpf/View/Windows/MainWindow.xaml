@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:vm="clr-namespace:ReviewBookWpf.ViewModel"
+        xmlns:fa="http://schemas.fontawesome.com/icons/"
         xmlns:cmd ="clr-namespace:ReviewBookWpf.Infastructures.Commands"
         xmlns:l="clr-namespace:ReviewBookWpf"
         Title="{Binding Title}" 
@@ -25,7 +26,7 @@
             <TextBox Width="106" Height="24" FontSize="16" FontWeight="Bold" Margin="60,0,0,0">Review book
             </TextBox>
             <TextBlock Width="130" Height="20" Margin="120,0,0,0" Cursor="Hand">Поиск...</TextBlock>
-            <MenuItem Header="" Width="50">
+            <MenuItem>
                 <MenuItem.Icon>
                     <Image Source="../Images/user.png" Margin="0,0,-25,0"></Image>
                 </MenuItem.Icon>
