@@ -37,6 +37,8 @@ namespace ReviewBookWpf.ViewModel
         private bool CanCloseAppCommandExecute(object p) => true;
         #endregion
 
+        
+
 
 
         #endregion
