@@ -6,6 +6,7 @@
         xmlns:vm="clr-namespace:ReviewBookWpf.ViewModel"
         xmlns:fa="http://schemas.fontawesome.com/icons/"
         xmlns:cmd ="clr-namespace:ReviewBookWpf.Infastructures.Commands"
+        xmlns:materialDesign="https://materialdesigninxaml.net/winfx/xaml/themes"
         xmlns:l="clr-namespace:ReviewBookWpf"
         Title="{Binding Title}" 
         Height="450" Width="800">
