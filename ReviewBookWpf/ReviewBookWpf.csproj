@@ -88,9 +88,17 @@
     </ApplicationDefinition>
     <Compile Include="Services\DataBase\AppContext.cs" />
     <Compile Include="Services\DataBase\User.cs" />
+    <Compile Include="ViewModel\AutorizationWindowVievModel.cs" />
+    <Compile Include="View\Windows\AutorizationWindow.xaml.cs">
+      <DependentUpon>AutorizationWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\Windows\RegistrationWindow.xaml.cs">
       <DependentUpon>RegistrationWindow.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\Windows\AutorizationWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\Windows\MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>

@@ -9,14 +9,24 @@ namespace ReviewBookWpf.Services.DataBase
 {
     internal class User
     {
-        private int id { get; set; }
-        private string login, email, pass;
-        public User(string login, string email, string pass)
+        public int ID { get; set; }
+        public string login { get; set; }
+        public  string pass { get; set; }
+        public  string email { get; set; }
+      
+        
+
+       
+
+
+        public User(string login, string pass, string email)
         {
-           
+
             this.login = login;
-            this.email = email;
             this.pass = pass;
+            this.email = email;
         }
+
+        public User(){}
     }
 }

@@ -15,18 +15,18 @@
     </Window.DataContext>
     <DockPanel>
         <Menu DockPanel.Dock="Top">
-            <Button>
-                <TextBlock  Width="45" Height="20" Margin="5,0,0,0" Cursor="Hand">Главная</TextBlock>
+            <Button Width="82">
+                <TextBlock  Width="60" Height="20"  Cursor="Hand" FontSize="12">Главная</TextBlock>
+            </Button>
+            <Button Width="73">
+                <TextBlock x:Name="GenreField" Width="48" Height="20"  Cursor="Hand" Foreground="White" Text="Жанры"/>
             </Button>
             <Button>
-                <TextBlock x:Name="GenreField" Width="45" Height="20" Margin="5,0,0,0" Cursor="Hand" Foreground="Black" Background="{DynamicResource {x:Static SystemColors.InactiveSelectionHighlightBrushKey}}">Жанры</TextBlock>
+                <TextBlock Width="141" Height="20"  Cursor="Hand" Text="Написать рецензию"/>
             </Button>
-            <Button>
-                <TextBlock Width="110" Height="20" Margin="5,0,0,0" Cursor="Hand">Написать рецензию</TextBlock>
-            </Button>
-            <TextBox Width="106" Height="24" FontSize="16" FontWeight="Bold" Margin="60,0,0,0">Review book
-            </TextBox>
-            <TextBlock Width="130" Height="20" Margin="120,0,0,0" Cursor="Hand">Поиск...</TextBlock>
+            <TextBox Width="106" Height="30"  FontSize="18" FontWeight="Bold"  Text="Review book" /> 
+            
+            <TextBlock Width="130" Height="20"  Cursor="Hand"  Foreground="Gray" Text ="Поиск..." />
             <MenuItem>
                 <MenuItem.Icon>
                     <Image Source="../Images/user.png" Margin="0,0,-25,0"></Image>
@@ -43,17 +43,7 @@
         </Menu>
         <StatusBar DockPanel.Dock="Bottom"></StatusBar>
         <TabControl>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="208*"/>
-                    <ColumnDefinition Width="189*"/>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="36*"/>
-                    <RowDefinition Height="191*"/>
-                    <RowDefinition Height="177*"/>
-                </Grid.RowDefinitions>
-            </Grid>
+            
         </TabControl>
 
 
